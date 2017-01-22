@@ -45,7 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Raycast.cs" />
+     <Compile Include="Assets\EnemyAttack.cs" />
+     <Compile Include="Assets\EnemyMotion.cs" />
+     <Compile Include="Assets\PlayerHealth.cs" />
+     <Compile Include="Assets\RayViewerComplete.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
