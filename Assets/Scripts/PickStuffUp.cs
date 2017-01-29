@@ -15,7 +15,8 @@ public class PickStuffUp : MonoBehaviour {
 	private float pointAlongTheWay;
 	private float distCovered;
 	public float speed = 1.0F;
-	public float weaponRange = 50f;                       // Distance in Unity units over which the Debug.DrawRay will be drawn
+	public float weaponRange = 50f;  
+	private GameObject target;// Distance in Unity units over which the Debug.DrawRay will be drawn
 
 
 	// Use this for initialization
@@ -32,18 +33,23 @@ public class PickStuffUp : MonoBehaviour {
 		if (Physics.Raycast (lineOrigin, fpsCam.transform.forward, out hit)) {
 			if(Input.GetKey(KeyCode.P)){
 				Debug.Log (hit.collider.gameObject.name);
-				GameObject target = GameObject.Find (hit.collider.gameObject.name);
+				target = GameObject.Find (hit.collider.gameObject.name);
 				fromPoint = target.transform.position;
 				move = true;
 				pickedSomethingUp = true;
-				journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+				journeyLength = Vector3.Distance(fromPoint, toPoint);
 			}
 		}
 		if (move == true) {
 			distCovered += Time.deltaTime * speed;
 			pointAlongTheWay = distCovered / journeyLength;
 			target.transform.position = Vector3.Lerp (fromPoint, toPoint, pointAlongTheWay);
+			if (target.transform.position == toPoint) {
+				move = false;
+				target.transform.SetParent (transform);
+				target.transform.localPosition=new Vector3 (0, 0, 1);
+			}
 		}
-		target.transform.SetParent (transform);
+		//target.transform.SetParent (transform);
 	}
 }
