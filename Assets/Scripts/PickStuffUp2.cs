@@ -38,32 +38,32 @@ public class PickStuffUp2 : MonoBehaviour {
 
 		if (Physics.Raycast (lineOrigin, fpsCam.transform.forward, out hit)) {
 			if(Input.GetKey(KeyCode.P)){
-				//Debug.Log (hit.collider.gameObject.name);
 				target = GameObject.Find (hit.collider.gameObject.name);
 				rigidBody = target.GetComponent<Rigidbody> ();
 				collider = target.GetComponent<Collider> ();
-				//fromPoint = target.transform.position;
 				move = true;
-				//pickedSomethingUp = true;
-				//journeyLength = Vector3.Distance(fromPoint, toPoint);
 			}
 		}
+
 		if (move == true) {
 			fromPoint = target.transform.position;
 			rigidBody.AddForce (toPoint - fromPoint, ForceMode.Acceleration);
 		}
+
 		distance = Vector3.Distance(fromPoint, toPoint);
 		Debug.Log ("Dist: " + distance);
-		if (distance < 5f) {
+
+		if (distance < 5f && move == true) {
 			move = false;
 			rigidBody.isKinematic = true;
 			target.transform.SetParent (transform);
-			target.transform.localPosition = new Vector3 (0, 0, collider.bounds.size.z/2f);
+			target.transform.localPosition = new Vector3 (0, 0, collider.bounds.size.z);
 		}
+
 		if (Input.GetKey (KeyCode.O)) {
 			target.transform.SetParent (null);
 			rigidBody.isKinematic = false;
-
+			rigidBody.AddForce ((fromPoint - toPoint)*10, ForceMode.Acceleration);
 		}
 	}
 }
