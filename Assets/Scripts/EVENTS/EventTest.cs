@@ -8,35 +8,37 @@ public class EventTest : MonoBehaviour {
 
 	void Awake ()
 	{
-		someListener = new UnityAction (SomeFunction);
+		//someListener = new UnityAction (SomeFunction);
 	}
 
 	void OnEnable ()
 	{
-		EventManager.StartListening ("test", someListener);
-		EventManager.StartListening ("Spawn", SomeOtherFunction);
-		EventManager.StartListening ("Destroy", SomeThirdFunction);
+		EventManager.StartListening ("state01", SomeFunction);
+		EventManager.StartListening ("state02", SomeOtherFunction);
+		EventManager.StartListening ("state03", SomeThirdFunction);
 	}
 
 	void OnDisable ()
 	{
-		EventManager.StopListening ("test", someListener);
-		EventManager.StopListening ("Spawn", SomeOtherFunction);
-		EventManager.StopListening ("Destroy", SomeThirdFunction);
+		EventManager.StopListening ("state01", SomeFunction);
+		EventManager.StopListening ("state02", SomeOtherFunction);
+		EventManager.StopListening ("state03", SomeThirdFunction);
 	}
 
 	void SomeFunction ()
 	{
-		Debug.Log ("Some Function was called!");
+		Debug.Log ("State 1 was called!");
+		Renderer r = GetComponent<Renderer> ();
+		r.material.color = new Color (255, 0, 0);
 	}
 
 	void SomeOtherFunction ()
 	{
-		Debug.Log ("Some Other Function was called!");
+		Debug.Log ("State 2 was called!");
 	}
 
 	void SomeThirdFunction ()
 	{
-		Debug.Log ("Some Third Function was called!");
+		Debug.Log ("State 3 was called!");
 	}
 }

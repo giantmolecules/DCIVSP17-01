@@ -55,6 +55,9 @@
      <Compile Include="Assets\Scripts\EVENTS\EventManager.cs" />
      <Compile Include="Assets\Scripts\EVENTS\EventTest.cs" />
      <Compile Include="Assets\Scripts\EVENTS\EventTriggerTest.cs" />
+     <Compile Include="Assets\Scripts\EVENTS\Object1Script.cs" />
+     <Compile Include="Assets\Scripts\EVENTS\Object2Script.cs" />
+     <Compile Include="Assets\Scripts\EVENTS\Object3Script.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyMotion.cs" />
      <Compile Include="Assets\Scripts\LightSwitch.cs" />
