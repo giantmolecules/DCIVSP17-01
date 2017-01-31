@@ -47,10 +47,11 @@ public class PickStuffUp2 : MonoBehaviour {
 
 		if (move == true) {
 			fromPoint = target.transform.position;
+			distance = Vector3.Distance(fromPoint, toPoint);
 			rigidBody.AddForce (toPoint - fromPoint, ForceMode.Acceleration);
 		}
 
-		distance = Vector3.Distance(fromPoint, toPoint);
+
 		Debug.Log ("Dist: " + distance);
 
 		if (distance < 5f && move == true) {

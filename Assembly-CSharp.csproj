@@ -45,7 +45,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DC Statemachine\AbstractState.cs" />
+     <Compile Include="Assets\DC Statemachine\StateManager.cs" />
+     <Compile Include="Assets\DC Statemachine\StateOne.cs" />
+     <Compile Include="Assets\DC Statemachine\StateThree.cs" />
+     <Compile Include="Assets\DC Statemachine\StateTwo.cs" />
+     <Compile Include="Assets\Scripts\BBStateManager.cs" />
      <Compile Include="Assets\Scripts\DayNightCycle.cs" />
+     <Compile Include="Assets\Scripts\EVENTS\EventManager.cs" />
+     <Compile Include="Assets\Scripts\EVENTS\EventTest.cs" />
+     <Compile Include="Assets\Scripts\EVENTS\EventTriggerTest.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyMotion.cs" />
      <Compile Include="Assets\Scripts\LightSwitch.cs" />
@@ -54,6 +63,10 @@
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\RayViewerComplete.cs" />
      <Compile Include="Assets\Scripts\Screenshot.cs" />
+     <Compile Include="Assets\Scripts\State01.cs" />
+     <Compile Include="Assets\Scripts\State02.cs" />
+     <Compile Include="Assets\Scripts\State03.cs" />
+     <Compile Include="Assets\Scripts\StateScript.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
