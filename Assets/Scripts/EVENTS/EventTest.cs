@@ -27,18 +27,16 @@ public class EventTest : MonoBehaviour {
 
 	void SomeFunction ()
 	{
-		Debug.Log ("State 1 was called!");
-		Renderer r = GetComponent<Renderer> ();
-		r.material.color = new Color (255, 0, 0);
+		Debug.Log (gameObject.name + "Reporting State 1 was called!");
 	}
 
 	void SomeOtherFunction ()
 	{
-		Debug.Log ("State 2 was called!");
+		Debug.Log (gameObject.name + "Reporting State 2 was called!");
 	}
 
 	void SomeThirdFunction ()
 	{
-		Debug.Log ("State 3 was called!");
+		Debug.Log (gameObject.name + "Reporting State 3 was called!");
 	}
 }
