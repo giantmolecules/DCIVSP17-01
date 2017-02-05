@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/lighting tests.unity
+- path: Assets/forest-fall.unity
   isLoaded: 1
   isActive: 1
