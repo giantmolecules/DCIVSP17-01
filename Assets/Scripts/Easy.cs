@@ -24,6 +24,6 @@ public class Easy : MonoBehaviour {
 		float tn = t / interval;
 		val = func (0, 10, tn);
 		Debug.Log (val);
-		theObject.transform.position = startPos.position +  new Vector3 (val, 0, 0);
+		theObject.transform.position = new Vector3 (val*2, 0, 0);
 	}
 }
