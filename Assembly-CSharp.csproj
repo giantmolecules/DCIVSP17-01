@@ -58,6 +58,8 @@
      <Compile Include="Assets\Scripts\EVENTS\Object1Script.cs" />
      <Compile Include="Assets\Scripts\EVENTS\Object2Script.cs" />
      <Compile Include="Assets\Scripts\EVENTS\Object3Script.cs" />
+     <Compile Include="Assets\Scripts\EasingFunction.cs" />
+     <Compile Include="Assets\Scripts\Easy.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyMotion.cs" />
      <Compile Include="Assets\Scripts\Explode.cs" />

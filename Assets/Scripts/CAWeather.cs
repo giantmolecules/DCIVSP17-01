@@ -10,9 +10,9 @@ public class CAWeather : MonoBehaviour {
 	void Start () {
 		rend = GetComponent<Renderer>();
 		neighbors = new bool[16];
-		for (int i = 0; i < neighbors.Length; i++) {
-			neighbors [i] = Random.Range (0, 2);
-		}
+		//for (int i = 0; i < neighbors. ; i++) {
+		//	neighbors [i] = Random.Range (0, 2);
+		//}
 	}
 	
 	// Update is called once per frame
